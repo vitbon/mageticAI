@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ads page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700" >
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <main class="page-wrapper">
+      <h1 class="campaign-title">
+        Pets
+      </h1>
+      <section class="campaigns">
+        <div class="campaign-wrapper">
+          <span class="button active" data-click="4b20aa37-9e1a-4155-82e0-386d171cb1f0">
+            PETS
+          </span>
+
+          <!-- AD's item open -->
+          <section>
+            <div class="card-block">
+              <div class="card__image">
+                <img class="card__image fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png" alt="Doggo"/>
+              </div>
+
+              <div class="card__info">
+                <h3>
+                  Doggo Dogg
+                </h3>
+
+                <input type="checkbox" name="trigger" id="trigger1">
+                <label class="trigger-arrow" for="trigger1">
+                  <span></span>
+                </label>
+
+                <div class="card__info__extra">
+                  <p>
+                    A very good boi that loves playing fetch and ice-cream! Gentle with everyone. Scared of the rain.
+                  </p>
+
+                  <div class="card__action">
+                    <a class="button" href="#" style="display: inline">
+                        Go for it!
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- AD's item close -->
+        </div>
+
+        <div class="campaign-wrapper">
+          <span class="button" data-click="b0e78282-d457-4790-97f0-d5c0642bee4d">
+            FOOD
+          </span>
+            <!-- AD's item open -->
+            <section>
+              <div class="card-block">
+                <div class="card__image">
+                  <img class="card__image fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png" alt="Doggo"/>
+                </div>
+  
+                <div class="card__info">
+                  <h3>
+                    Doggo Dogg
+                  </h3>
+  
+                  <input type="checkbox" name="trigger" id="trigger1">
+                  <label class="trigger-arrow" for="trigger1">
+                    <span></span>
+                  </label>
+  
+                  <div class="card__info__extra">
+                    <p>
+                      A very good boi that loves playing fetch and ice-cream! Gentle with everyone. Scared of the rain.
+                    </p>
+  
+                    <div class="card__action">
+                      <a class="button" href="#" style="display: inline">
+                          Go for it!
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- AD's item close -->
+        </div>
+
+        <div class="campaign-wrapper">
+          <span class="button" data-click="10a827d5-13b5-4cd6-a2d0-9f22dd7738d1">
+            PLANTS
+          </span>
+          <!-- AD's item open -->
+          <section>
+            <div class="card-block">
+              <div class="card__image">
+                <img class="card__image fit" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/dog.png" alt="Doggo"/>
+              </div>
+
+              <div class="card__info">
+                <h3>
+                  Doggo Dogg
+                </h3>
+
+                <input type="checkbox" name="trigger" id="trigger1">
+                <label class="trigger-arrow" for="trigger1">
+                  <span></span>
+                </label>
+
+                <div class="card__info__extra">
+                  <p>
+                    A very good boi that loves playing fetch and ice-cream! Gentle with everyone. Scared of the rain.
+                  </p>
+
+                  <div class="card__action">
+                    <a class="button" href="#" style="display: inline">
+                        Go for it!
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- AD's item close -->
+        </div>
+        <style>.campaigns { position: absolute }</style>
+      </section>
+
+    </main>
+    <script>
+      document.addEventListener('click',  (event) => {
+          event.stopPropagation();
+
+          console.log("data-click:", event.path[0].attributes[1].value);
+
+          let label = event.target.matches("button"); // && event.target;
+          if (label) {
+              label.parentElement.querySelector(".checkbox").click();
+          }
+      })
+  </script>
+    </body>
+</html>
